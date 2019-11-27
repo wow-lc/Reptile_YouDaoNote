@@ -36,11 +36,12 @@ try {
       console.log("开始爬取...");
       await page.setContent("<script>...</script>");
       let Cookie = await page.evaluate(() => document.cookie);
-      let _data = await utils.pollArticleList(1, 30, utils.getArticleDetail);
+      let _data = await utils.pollArticleList(1,30, utils.getArticleDetail);
+      console.log('_data', _data.length)
       const _header = ["name", "summary", "count", "content"];
       const _filePath = "out_file.xlsx";
       xlsxCreator(_header, _data, _filePath);
-    }, 10 * 1000);
+    }, 5000);
 
     // await browser.close();
   })();

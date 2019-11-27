@@ -11,6 +11,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# files 
+out_file.xlsx
+
 # Editor directories and files
 .idea
 .vscode
