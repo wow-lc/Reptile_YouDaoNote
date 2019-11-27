@@ -1,6 +1,8 @@
 module.exports = {
-  getArticleDetail:
-    "https://note.youdao.com/yws/api/personal/sync?method=download&keyfrom=web&cstk=uutnaTVw", // 文章详情
+  SIGNIN_URL:　"https://note.youdao.com/signIn/index.html",
+  ARTICLE_LIST_URL: "https://note.youdao.com/yws/api/personal/file?method=listRecent&keyfrom=web&cstk=knCd5pWk",  // 还需要拼接的字段 &offset=1&limit=30
+  ARTICLE_DETAIL_Url:
+    "https://note.youdao.com/yws/api/personal/sync?method=download&keyfrom=web&cstk=uutnaTVw&version=-1",
   cookie:
-    'OUTFOX_SEARCH_USER_ID_NCOO=1123452851.708757; JSESSIONID=aaaUnOmokTNvZ8FnywJ6w; OUTFOX_SEARCH_USER_ID="-1064503216@10.169.0.102"; YNOTE_SESS=v2|_p4nDvUAoyp4RfTuhMwL0lf6MgLkflERTuh46un4puRkGOMT464eFRgLOfQyPLJyR6LnMpuO4wF06ukLlE64lM0Ju0LlGPLpB0; YNOTE_PERS=v2|wxoa||YNOTE||web||-1||1574761582725||115.205.202.149||weixinobU7VjmZ-x5KGNb6JqXHxQMa_BQI||UWhfY56MQB0gS0MeyO4OGRgF6LU50MP4Rp4n46ShMgK0OA0fYGO4J4RgFnHkWO4lE0PFn4UA0flWRPz6Lzmh4TLR; YNOTE_CSTK=jJcbMtpt; YNOTE_LOGIN=5||1574761585046; __yadk_uid=MUxHXLwlik3luXr8POgMMHD65VWwkYTU; _ga=GA1.2.2112969852.1574761514; _gid=GA1.2.1470482229.1574761514'
+    'OUTFOX_SEARCH_USER_ID_NCOO=264122671.72061858; JSESSIONID=aaa_8q-OUWyBq8j2t7Q6w; OUTFOX_SEARCH_USER_ID="181539156@10.169.0.84"; YNOTE_SESS=v2|olr9C0JQoyQuP4pLhMUE0TFhLpS0fYf0OAO4lG6Ll5RpBnfkEkLzERgyRHP4h4z5RPF0MP4nflm0PL6MgShMO5RkmO4Py0HPZ0; YNOTE_PERS=v2|wxoa||YNOTE||web||-1||1574846666554||115.205.202.149||weixinobU7VjmZ-x5KGNb6JqXHxQMa_BQI||qK0HQy0L6Z0guO4Ym0LeL0wF0L6Ln4JuRwBPMJZhHQ40U5kMg4OfOMRgLRLYMnfOG0OWn4zA0HlE06zhMJyRflER; YNOTE_CSTK=sHIo-jTT; YNOTE_LOGIN=5||1574846672054; Hm_lvt_30b679eb2c90c60ff8679ce4ca562fcc=1574846599; Hm_lpvt_30b679eb2c90c60ff8679ce4ca562fcc=1574846599; __yadk_uid=1JYz8deXSUVHNiwRLTgWrBR18PPvBXfA; _ga=GA1.2.891693884.1574846600; _gid=GA1.2.1236332252.157484'
   };
