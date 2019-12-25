@@ -13,10 +13,10 @@
 
 导出的文件/Excel截图
 <p align="center">
-  <img width="320" src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/show-img/excel.png">
+  <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/show-img/excel.png">
 </p>
 <p align="center">
-  <img width="320" src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/show-img/1577242679(1).png">
+  <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/show-img/1577242679(1).png">
 </p>
 
 
