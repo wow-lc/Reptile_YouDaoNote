@@ -3,6 +3,21 @@ const config = require("./config");
 
 let count = 0;
 
+/** 根据路径获取列表 */
+const getByPath = async path => {
+  try {
+    const res = await axios.post(
+      config.ARTICLE_LIST_PATH + `&path=${path}`,
+      {},
+      { headers: { Cookie: config.cookie } }
+    );
+
+    return res.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 /** 获取文章详情 */
 const getArticleDetail = async fileInfo => {
   try {
@@ -27,7 +42,7 @@ const getArticleDetail = async fileInfo => {
 const getArticleList = async (offset, limit) => {
   try {
     const res = await axios.post(
-      config.ARTICLE_LIST_URL + `&offset=${offset}&limit=${limit}`,
+      config.RECENT_LIST_URL + `&offset=${offset}&limit=${limit}`,
       {},
       { headers: { Cookie: config.cookie } }
     );
@@ -72,6 +87,7 @@ const pollArticleList = async (offset = 1, limit, bc) => {
 };
 
 module.exports = {
+  getByPath,
   getArticleList,
   getArticleDetail,
   pollArticleList
