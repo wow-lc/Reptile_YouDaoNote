@@ -18,7 +18,7 @@ function createDir(path) {
   try {
     fs.statSync(path);
   } catch (error) {
-    fs.mkdirSync("./resource");
+    fs.mkdirSync(path);
   }
 }
 module.exports = {

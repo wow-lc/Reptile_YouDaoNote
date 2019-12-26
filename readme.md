@@ -8,15 +8,15 @@
 ```
 1. npm i
 2. 修改cookie (utils目录下的config.js)
-3.npm run start
+3. npm run start
 ```
 
 导出的文件/Excel截图
 <p align="center">
-  <img width="320" src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/show-img/excel.png">
+  <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/show-img/excel.png">
 </p>
 <p align="center">
-  <img width="320" src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/show-img/1577242679(1).png">
+  <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/show-img/1577242679(1).png">
 </p>
 
 
