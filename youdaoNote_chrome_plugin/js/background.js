@@ -3,11 +3,13 @@
 /**
  * listener
  */
-chrome.runtime.onMessage.addListener(msg => {
-  let {to, action } = msg;
-  if(to === "background") {
-    if(action === "success") {
-      sendNotificat();
+chrome.runtime.onMessage.addListener(data => {
+  let { to, action, msg } = data;
+  if (to === "background") {
+    if (action === "success") {
+      sendNotificat(msg);
+    } else {
+      sendNotificat(msg);
     }
   }
 });
@@ -24,24 +26,17 @@ chrome.contextMenus.create({
   }
 });
 
-const sendNotificat = () => {
+const sendNotificat = (msg) => {
   chrome.notifications.create(
     Math.random() + "", // id
     {
       type: "list",
-
       iconUrl: "assets/icon.png",
-
       appIconMaskUrl: "assets/icon.png",
-
       title: "YouDaoNote Reptile",
-
       message: "V1.0.1",
-
-      contextMessage: "生成excel完成！",
-      items: [
-        { title: "提示", message: "生成excel完成！" },
-      ],
+      contextMessage: msg,
+      items: [{ title: "提示", message: msg }],
 
       eventTime: Date.now() + 2000
     },
