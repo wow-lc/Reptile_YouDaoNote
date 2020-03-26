@@ -1,10 +1,9 @@
-const fs = require("fs");
 const api = require("../api");
-const utils = require("../utils/util");
 
 /** 根据baseId获取目录结构 */
-const getResourcesByBaseid = async baseId => {
-  const res = await api.listPageByParentId(baseId);
+const getResourcesByBaseid = async (baseId, cookie) => {
+  const res = await api.listPageByParentId(baseId,null, cookie);
+  
   const entries = res.data.entries;
   for (let i = 0; i < entries.length; i++) {
     const entry = entries[i];
@@ -20,7 +19,7 @@ const getResourcesByBaseid = async baseId => {
       createTime: createTimeForSort
     };
     if (dir) {
-      children = await getResourcesByBaseid(id);
+      children = await getResourcesByBaseid(id,cookie);
     }
     entries[i] = {
       ...data,
@@ -33,33 +32,30 @@ const getResourcesByBaseid = async baseId => {
 
 /** 轮询创建目录 */
 let dataList = [];
-const pollArticleList = async (resourcesList, subPath = "./resource") => {
+const pollArticleList = async (resourcesList, subPath = "./resource", cookie) => {
   if (resourcesList.length <= 0) {
     return;
   }
   for (let i = 0; i < resourcesList.length; i++) {
     const { id, parentId, name, dir, createTime, children } = resourcesList[i];
     if (dir) {
-      utils.createDir(`${subPath}/${name}`);
       pollArticleList(children, `${subPath}/${name}`);
     } else {
-      const detail = await api.getArticleDetail(id);
+      let detail = await api.getArticleDetail(id, cookie);
+      console.log(detail);
+      
       let detailData = detail.data;
       if(Object.prototype.toString.call(detailData) === "[object Object]") {
         detailData = JSON.stringify(detailData);
       }
-      fs.writeFile(`${subPath}/${name}`, detailData, function(err) {
-        if (err) {
-          throw err;
-        }
-      });
+      
       dataList.push({
         id,
         parentId,
         name,
         dir,
         detail: detailData,
-        createTime: new Date(createTime)
+        createTime
       })
     }
   }

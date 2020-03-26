@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "YouDaoNote Reptile",
+  "description": "更方便地获取你的有道云个人笔记",
+  "version": "1.0.0",
+  "author": "call me bob",
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": true
+  },
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  },
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "homepage_url": "https://github.com/sleepq123",
+  "web_accessible_resources": ["js/inject.js","js/dist/main.js"],
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "cookies",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "declarativeContent",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/inject.js","js/dist/main.js"],
+      "css": ["css/toast.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

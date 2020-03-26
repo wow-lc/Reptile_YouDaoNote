@@ -1,4 +1,9 @@
-/** 封装http库的地方 */
+/**
+ *  封装http库的地方
+ *
+ * @format
+ */
+
 const Axios = require("axios");
 const Qs = require("qs");
 const config = require("./config");
@@ -7,15 +12,13 @@ const config = require("./config");
 const httpInstance = Axios.create({
   baseURL: config.domain_api,
   headers: {
-    "Content-type": "application/json;charset=UTF-8",
-    Cookie: config.cookie
+    "Content-type": "application/json;charset=UTF-8"
   },
   transformRequest: [
     (data, headers) => {
       return JSON.stringify(data);
     }
   ],
-  responseType: "json",
   paramsSerializer: function(params) {
     return Qs.stringify(params, { arrayFormat: "brackets" });
   }

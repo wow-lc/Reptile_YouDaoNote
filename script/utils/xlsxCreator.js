@@ -30,9 +30,7 @@ const dlXlsx = (_headers,_data,_outPath) => {
     };
    
     // 导出 Excel
-    XLSX.writeFile(workbook, _outPath)
-    console.log('生成成功！');
-    
+    XLSX.writeFile(workbook, _outPath);
 }
 
 module.exports = dlXlsx;

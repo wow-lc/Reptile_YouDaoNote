@@ -1,0 +1,22 @@
+@keyframes move-in {
+    0% {top: 80px}
+    50% {top: 120px}
+}
+
+.yd-toast {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    left:0;
+    right:0;
+    top: 120px;
+    width: 80px;
+    height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 5px;
+    color: #fff;
+    background: rgba(0,0,0, 0.8);
+    animation: move-in 1.5s ease;
+}

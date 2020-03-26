@@ -1,23 +1,42 @@
-导出个人有道云笔记数据
+<p align="center"><a href="https://github.com/sleepq123/Reptile_YouDaoNote target="_blank" rel="noopener noreferrer"><img width="100" src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/exhabition/icon.png" alt="Reptile_YouDaoNote"></a></p>
+<h2 align="center">导出个人有道云笔记数据</h2>
+导出excel、文件目录、文件内容的chrome插件
 
-> 导出excel、文件目录、文件内容
-
+### 为什么要写这个插件？
 > 出发点： 偷懒
 
-运行： 
-```
-1. npm i
-2. 修改cookie (utils目录下的config.js)
-3. npm run start
-```
+#### 如何安装？
+- git clone https://github.com/sleepq123/Reptile_YouDaoNote.git
+- cd Reptile_YouDaoNote
+- npm i
+- npm run build
 
-导出的文件/Excel截图
+#### 安装插件
+执行npm run build无错误信息后,youdaoNote_chrome_plugin目录就是chrome插件开发目录  
+只需打开chrome扩展程序，并开启开发者模式将youdaoNote_chrome_plugin目录拖动chrome即可
+
+#### 如何使用？
+- [打开有道云笔记](https://note.youdao.com)
+- 微信扫码登录或其他方式登录
+- 右键 -> 生成个人笔记Excel
+
+#### 可能遇到的问题
+* 调用有道云笔记接口401权限问题
+> 由于有道云接口需要传cstk参数，而这个参数可能是动态的  
+因此需要手动到项目[script/utils/config.js](https://github.com/sleepq123/Reptile_YouDaoNote/blob/master/script/utils/config.js)修改下cstk配置
+>> 如何获取cstk?
+>> <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/exhabition/course.png">
+
+
+#### 生成的截图
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/show-img/excel.png">
+  <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/exhabition/success_result.png">
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/show-img/1577242679(1).png">
+  <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/exhabition/network.png">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/exhabition/excel.png">
 </p>
 
-
-> 说明： 只是为了个人方便笔记的迁移，拒绝一切法律责任！
+> 说明： 只是为了个人方便笔记的迁移
