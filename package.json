@@ -1,11 +1,10 @@
 {
   "name": "Reptile_Youdao",
   "version": "1.1.0",
-  "description": "",
+  "description": "<p align=\"center\"><a href=\"https://github.com/sleepq123/Reptile_YouDaoNote target=\"_blank\" rel=\"noopener noreferrer\"><img width=\"100\" src=\"https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/exhabition/icon.png\" alt=\"Reptile_YouDaoNote\"></a></p>\r <h2 align=\"center\">导出个人有道云笔记数据</h2>\r 导出excel、文件目录、文件内容的chrome插件",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node ./script/generate.js",
     "build": "cross-env NODE_ENV=development webpack --config ./webpack.config.js"
   },
   "keywords": [],
@@ -13,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
+    "commander": "^5.0.0",
     "excel-export": "^0.5.1",
+    "inquirer": "^7.1.0",
     "qs": "^6.9.1",
     "xlsx": "^0.15.2"
   },
@@ -21,5 +22,16 @@
     "clean-webpack-plugin": "^3.0.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleepq123/Reptile_YouDaoNote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sleepq123/Reptile_YouDaoNote/issues"
+  },
+  "homepage": "https://github.com/sleepq123/Reptile_YouDaoNote#readme"
 }
