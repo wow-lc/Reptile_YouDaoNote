@@ -19,14 +19,7 @@
 - [打开有道云笔记](https://note.youdao.com)
 - 微信扫码登录或其他方式登录
 - 右键 -> 生成个人笔记Excel
-
-#### 可能遇到的问题
-* 调用有道云笔记接口401权限问题
-> 由于有道云接口需要传cstk参数，而这个参数可能是动态的  
-因此需要手动到项目[script/utils/config.js](https://github.com/sleepq123/Reptile_YouDaoNote/blob/master/script/utils/config.js)修改下cstk配置
->> 如何获取cstk?
->> <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/exhabition/course.png">
-
+ <img src="https://raw.githubusercontent.com/sleepq123/Reptile_YouDaoNote/master/exhabition/use.png">
 
 #### 生成的截图
 <p align="center">

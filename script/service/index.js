@@ -39,7 +39,7 @@ const pollArticleList = async (resourcesList, subPath = "./resource", cookie) =>
   for (let i = 0; i < resourcesList.length; i++) {
     const { id, parentId, name, dir, createTime, children } = resourcesList[i];
     if (dir) {
-      pollArticleList(children, `${subPath}/${name}`);
+      pollArticleList(children, `${subPath}/${name}`, cookie);
     } else {
       let detail = await api.getArticleDetail(id, cookie);
       console.log(detail);
